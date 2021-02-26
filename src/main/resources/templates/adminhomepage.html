@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity: 1}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>AdminHomePage</title>
+</head>
+<body>
+<h2>Admin Home Page</h2>
+<div class="row">
+    <div class="column">
+    <table style="width:100%">
+        <tr>
+            <th>Total Users</th>
+            <th>Total Books</th>
+            <th>Available Books</th>
+            <th>Pending Approval</th>
+            <th>Active Users</th>
+        </tr>
+    </table>
+    </div>
+    <div class="column">
+        <form action="/managebooks">
+        <button class="btn" formaction="/managebooks">Manage Books</button>
+
+        </form>
+        <form action="/manageusers">
+            <button class="btn" formaction="/manageusers">Manage Users</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
