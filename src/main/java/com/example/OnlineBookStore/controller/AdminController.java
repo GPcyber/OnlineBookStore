@@ -21,4 +21,9 @@ public class AdminController {
     public String adminHome(){
         return "adminhomepage";
     }
+
+    @GetMapping("/addnewbook")
+    public String addNewBook(){
+        return "addnewbook";
+    }
 }

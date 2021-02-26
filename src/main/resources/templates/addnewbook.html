@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addnewbook</title>
+</head>
+<body>
+
+<div>
+<form action="/booksave" method="post">
+    <div class="column" >
+        <h2 style="text-align:center;font-size: 35px;">Add new Book</h2>
+        <hr>
+        <br>
+        <div class="text"><label for><b>Book ID:</b></label> &emsp;&emsp;&nbsp;
+            <input type="text"  name="bookid" required></div><br>
+        <div class="text"><label for><b>Book Name:</b></label>&emsp;&nbsp;
+            <input  type="text"  name="bookname" required></div><br>
+        <div class="text"><label for><b>Author:</b></label>
+            <input type="text"  name="author" required></div><br>
+        <div class="text"><label for><b>Published Year:</b></label>&emsp;&nbsp;&nbsp;
+            <input type="text" name="publishedyear" required></div><br>
+        <div class="text"><label for><b>Summary:</b></label>&nbsp;&nbsp;
+            <textarea type="text" name="summary" rows="6" cols="53"></textarea></div><br>
+        <div class="text"><label for><b>Availability:</b></label>&emsp;
+            <input type="checkbox" class="checkbox" name="cflag" value="1"></input></div><br>
+        <button formaction="/booksave" style="margin:15px;font-size:15px" type="submit" class="buttonsubmit" onclick="myfunction()">Add Course</button>
+    </div>
+</form>
+</div>
+<script>
+function myfunction() {
+  alert("Added Successfully");
+}
+</script>
+</body>
+</html>
